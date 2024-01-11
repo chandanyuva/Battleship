@@ -146,12 +146,12 @@ export const Gameboard = () => {
 
     // Increase hit number if ship contained in attacked square of the that ship
     const receiveAttack = (index) => {
-        let i = findIndex(board, index);
-        if (objList[i].ship != null) {
-            objList[i].ship.hit();
-            objList[i].attacked = true;
+        // let i = findIndex(board, index);
+        if (objList[index].ship != null) {
+            objList[index].ship.hit();
+            objList[index].attacked = true;
         } else {
-            objList[i].attacked = true;
+            objList[index].attacked = true;
         }
     };
 
